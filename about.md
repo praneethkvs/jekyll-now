@@ -4,12 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+Hi My name is Praneeth Kandula and this is my personal blog. 
+I am currently pursuing my Business Analytics Degree at the University of South Florida and also a Graduate Teaching Assistant.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[praneeth.jm@gmail.com](mailto:email@domain.com)
