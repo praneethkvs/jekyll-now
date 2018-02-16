@@ -4,8 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Hi My name is Praneeth Kandula and this is my personal blog. 
-I am currently pursuing my Business Analytics Degree at the University of South Florida and also a Graduate Teaching Assistant.
+Hi My name is Praneeth Kandula and this is my personal blog. <br>
+I am currently pursuing my Business Analytics Degree at the University of South Florida, Tampa.
 
 ### Contact me
 
