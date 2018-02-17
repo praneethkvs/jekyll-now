@@ -9,7 +9,7 @@ name: Praneeth Kandula
 description: Blog
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars2.githubusercontent.com/u/25500916?s=400&u=4fa848c0ca806f292fd863a105fff035c67df963&v=4
+avatar: 
 
 #
 # Flags below are optional
@@ -18,12 +18,12 @@ avatar: https://avatars2.githubusercontent.com/u/25500916?s=400&u=4fa848c0ca806f
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: praneeth.jm@gmail.com
   facebook:
   flickr:
   github: praneethkvs
   instagram:
-  linkedin: /in/praneethkandula
+  linkedin: praneethkandula
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: 
