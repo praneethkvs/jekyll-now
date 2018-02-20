@@ -74,17 +74,31 @@ The blockchain will successfully intialize, but you must be granted permission t
 #### Step:6
 The user with authority to grant connection i.e. the blockchain creator must grant requests to each of the connecting nodes by running the following command.
 
-```
+```cmd
 multichain-cli name grant 1... connect,send,receive
 ```
 where "1..." is the adress of the server node trying to connect.  
 
 ![MultiChain]({{ site.baseurl }}/images/access_granted.png "Access Granted")
-
+  
+![MultiChain]({{ site.baseurl }}/images/multiplenodesaccess.png "Multiple Nodes Access Granted")
+  
 #### Step:7
 After permission is granted, the new user must again type in the node address as done in Step 5 (Note, "multichaind name -daemon" could also be used here.) Successful connection to the blockchain is confirmed by "Node ready".  
 
-Now we have our two daemons running, one that created the blockchain and one that is now connected to the blockchain. Any number of nodes can be connected to the blockchain. 
+Now we have our two daemon nodes running, one that created the blockchain and one that is now connected to the blockchain. Any number of nodes can connect to the blockchain. To carry out outher commands and functions we need to open up new command windows in the multichain folder. **Note: The daemon nodes should always keep running in the background as long as the blockchain is alive.**
+
+### Creating Assets
+#### Step:8
+To create an asset, we need to get get the address that has the permission to create assets, so on the first server that is the node that created the blockchain we run the following
+
+```cmd
+listpermissions issue
+```
+
+
+
+
 
 
   
