@@ -109,6 +109,15 @@ where 1... is the address we obtained earlier, assetname is the name of the asse
 ```cmd
 multichain-cli name issue 1... assetname 1000 0.01
 ```
+  
+To check if the asset was created successfully or not, we can use the following command to get a list of all the available assets in the blockchain.  
+```cmd
+multichain-cli name listassets
+```
+![MultiChain]({{ site.baseurl }}/images/listassets.png "List Assets")  
+As you can see in the image above, an asset was created with an issue quantity of 1000 units.  
+
+
 
 ### Sending Assets
 #### Step:9
@@ -153,7 +162,22 @@ The long hex string in the image above "842865..." is the transaction id. Every 
     
 You can see four different transactions in the image below where one asset each is being sent to four different nodes.  
 
-![MultiChain]({{ site.baseurl }}/images/multisend.png "Multi Send")
+![MultiChain]({{ site.baseurl }}/images/multisend.png "Multi Send")  
+
+If we want to look at the quantity of assets remaining with each node after performing transactions, each node can run the following command to get a list of assets available with that node.  
+```cmd
+multichain-cli name gettotalbalances
+```
+
+Since we created 1000 units of an asset in **Step:8** and then sent 1 asset each to 4 other nodes in **step:12**, the first node that issued the assets must be left with a quantity of 996 units, which you can see in the image below:  
+
+![MultiChain]({{ site.baseurl }}/images/gettotalbalances.png "Total Balances Creator Node")  
+
+If we run the same command in one of the other nodes that is connected to the blockchain we should see a quantity of 1 asset, which is seen in the image below:  
+
+![MultiChain]({{ site.baseurl }}/images/gettotalbalances2.png "Total Balances Other Nodes")  
+
+
 
 ### Verifying Transactions
 #### Step:13
