@@ -189,7 +189,31 @@ multichain-cli name getwallettransaction a1b2...
 ```
 Where a1b2... is the transaction id.
 
-![MultiChain]({{ site.baseurl }}/images/getwaltrans.PNG "Verify Transaction")
+![MultiChain]({{ site.baseurl }}/images/getwaltrans.PNG "Verify Transaction")  
+
+Also remember we sent some data along with the transaction in **Step:12**, this metadata is also displayed in the image above in the data field, we can verify that it is the same hex code that we obtained from **Step:11**.
+
+
+### Other Useful Commands
+Below is alist of some other useful commands to query the blockchain.  
+```cmd
+multichain-cli name getblockchainparams //Get the parameters of this blockchain from the params.dat file
+multichain-cli name getpeerinfo         //For each node, get a list of connected peers
+multichain-cli name help                //See a list of all available commands
+multichain-cli name getinfo             //To get general information
+```
+
+The output of getpeerinfo is as shown in the images below.  
+
+![MultiChain]({{ site.baseurl }}/images/getpinfo1.PNG "Get Peer Info")  
+![MultiChain]({{ site.baseurl }}/images/getpinfo2.PNG "Get Peer Info") 
+![MultiChain]({{ site.baseurl }}/images/getpinfo3.PNG "Get Peer Info") 
+  
+### References:
+For a more thorough tutorial, you can check out the MultiChain Getting Started page here <https://www.multichain.com/getting-started/>  
+For a comprehensive list of commands, check out the <https://www.multichain.com/developers/json-rpc-api/>
+
+
 
 
 
