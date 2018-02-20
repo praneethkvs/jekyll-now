@@ -195,9 +195,9 @@ Also remember we sent some data along with the transaction in **Step:12**, this 
 
 
 ### Other Useful Commands
-Below is alist of some other useful commands to query the blockchain.  
+Below is a list of some other useful commands to query the blockchain.  
 ```cmd
-multichain-cli name getblockchainparams //Get the parameters of this blockchain from the params.dat file
+multichain-cli name getblockchainparams //Get the parameters of this blockchain
 multichain-cli name getpeerinfo         //For each node, get a list of connected peers
 multichain-cli name help                //See a list of all available commands
 multichain-cli name getinfo             //To get general information
@@ -211,7 +211,7 @@ The output of getpeerinfo is as shown in the images below.
   
 ### References:
 For a more thorough tutorial, you can check out the MultiChain Getting Started page here <https://www.multichain.com/getting-started/>  
-For a comprehensive list of commands, check out the <https://www.multichain.com/developers/json-rpc-api/>
+For a comprehensive list of commands, check out the link below <https://www.multichain.com/developers/json-rpc-api/>
 
 
 
