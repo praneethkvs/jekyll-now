@@ -96,7 +96,7 @@ To create an asset, we need to get get the address that has the permission to cr
 multichain-cli name listpermissions issue
 ```
 
-![MultiChain]({{ site.baseurl }}/images/listpermissions.png "")
+![MultiChain]({{ site.baseurl }}/images/listpermissions.png "List Permission")
   
 Now that we have the address, we create an asset on this node using the following command:  
 ```cmd
@@ -108,7 +108,7 @@ where 1... is the address we obtained earlier, assetname is the name of the asse
 multichain-cli name issue 1... assetname 1000 0.01
 ```
 
-![MultiChain]({{ site.baseurl }}/images/createasset.png "")
+![MultiChain]({{ site.baseurl }}/images/createasset.png "Create Asset")
 
 ### Sending Assets
 #### Step:9
@@ -130,27 +130,28 @@ We create the following JSON Object that represents a Car Title consisting of Ma
 #### Step:11
 Metadata that is sent in a blockchain must be in a hexadecimal format. So we need to convert this JSON object into hex. For this we can use several websites available online. The site used in the image below <http://www.online-toolz.com/tools/text-hex-convertor.php>
 
-![MultiChain]({{ site.baseurl }}/images/jsontohex.png "")
+![MultiChain]({{ site.baseurl }}/images/jsontohex.png "JSON to Hex")
 
 The Hexadecimal data that we get is as shown below.
 ```hex
-7b226d616b65223a22466f7264222c226d6f64656c223a224d757374616e67222c2256494e223a22314847434d383236333341303034333532227d
+7b226d616b65223a22466f7264222c226d6f64656c223a224d75737461  
+6e67222c2256494e223a22314847434d383236333341303034333532227d
 ```
 #### Step:12
 Now we send an asset along with the hexadecimal metadata to another node using the following command
 
 ```cmd
-multichain-cli name sendwithdata 1... "{\"assetname\":1}" 7b226d616b65223a22466f7264222c226d6f6...
+multichain-cli name sendwithdata 1... "{\"assetname\":1}" 7b226d6...
 ```
 Where 1... is the address of the node the asset is being sent to, the next parameter is a json object of the asset name which is "assetname" in the above code and the quantity of assets to be sent which is "1", followed by the hexadecimal metadata.  
 
-![MultiChain]({{ site.baseurl }}/images/sendwithdata.png "")
+![MultiChain]({{ site.baseurl }}/images/sendwithdata.png "Send With Data")
   
 The long hex string in the image above "842865..." is the transaction id. Every transaction returns a transaction id which is used to identify the transaction.  
     
 You can see four different transactions in the image below where one asset each is being sent to four different nodes.  
 
-![MultiChain]({{ site.baseurl }}/images/multisend.png "")
+![MultiChain]({{ site.baseurl }}/images/multisend.png "Multi Send")
 
 ### Verifying Transactions
 #### Step:13
@@ -162,7 +163,7 @@ multichain-cli name getwallettransaction a1b2...
 ```
 Where a1b2... is the transaction id.
 
-![MultiChain]({{ site.baseurl }}/images/getwaltrans.png "")
+![MultiChain]({{ site.baseurl }}/images/getwaltrans.png "Verify Transaction")
 
 
 
