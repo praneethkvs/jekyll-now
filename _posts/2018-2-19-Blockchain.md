@@ -124,7 +124,7 @@ Instead of just sending assets, we can also send transaction metadata along with
 #### Step:10
 We create the following JSON Object that represents a Car Title consisting of Make, Model and VIN.
 
-```json
+```html
 {"make":"Ford","model":"Mustang","VIN":"1HGCM82633A004352"}
 ```
 
