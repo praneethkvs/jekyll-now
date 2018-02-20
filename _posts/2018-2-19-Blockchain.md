@@ -189,7 +189,7 @@ multichain-cli name getwallettransaction a1b2...
 ```
 Where a1b2... is the transaction id.
 
-![MultiChain]({{ site.baseurl }}/images/getwaltrans.PNG "Verify Transaction")  
+![MultiChain]({{ site.baseurl }}/images/getwaltrans.png "Verify Transaction")  
 
 Also remember we sent some data along with the transaction in **Step:12**, this metadata is also displayed in the image above in the data field, we can verify that it is the same hex code that we obtained from **Step:11**.
 
