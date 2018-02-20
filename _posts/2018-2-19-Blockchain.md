@@ -81,7 +81,7 @@ where "1..." is the adress of the server node trying to connect.
 
 ![MultiChain]({{ site.baseurl }}/images/access_granted.png "Access Granted")
   
-![MultiChain]({{ site.baseurl }}/images/multiplenodesaccess.png "Multiple Nodes Access Granted")
+![MultiChain]({{ site.baseurl }}/images/multinodesaccess.png "Multiple Nodes Access Granted")
   
 #### Step:7
 After permission is granted, the new user must again type in the node address as done in Step 5 (Note, "multichaind name -daemon" could also be used here.) Successful connection to the blockchain is confirmed by "Node ready".  
