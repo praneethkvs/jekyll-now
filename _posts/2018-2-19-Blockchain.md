@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Setting up a BLockchain using MultiChain
+title:  Setting up a Blockchain using MultiChain
 ---
 
 ### Overview
@@ -13,7 +13,7 @@ ownership of digital tokens or assets.
 The First thing we need to do is download the MultiChain software.
 You can head on over to <https://www.multichain.com> and click "Download MultiChain" or 
 click on the following link <https://www.multichain.com/download-install/>
-which should directly take you to the download page as seen in the image below.
+which should directly take you to the download page as seen in the image below.  
   
 
 ![MultiChain Download Page]({{ site.baseurl }}/images/Download.PNG "MultiChain Download Page")
@@ -36,7 +36,12 @@ you should open the command window in the directory where MultiChain is stored o
 ### Creating the Blockchain
 Now that you have your command window open, we can start coding.    
 #### Step4:
-To create a blockchain, type the following command “multichain-util create name” into the command window. Replace name with the preferred name for your blockchain then press enter.
+To create a blockchain, type the following command into the command window.  
+```
+multichain-util create name
+
+```  
+Replace name with the preferred name for your blockchain then press enter.
   
 ![MultiChain cmd]({{ site.baseurl }}/images/create.png "Create Blockchain")  
 
