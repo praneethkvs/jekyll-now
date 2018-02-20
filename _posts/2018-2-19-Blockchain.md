@@ -49,7 +49,7 @@ Replace name with the preferred name for your blockchain then press enter.
 This does not actually create the blockchain but as you can see from the output the blockchain parameters
 have been setup. You can view and change the parameters by editing the **params.dat** file.  
 
-Now we runt he following command to create the blockchain.
+Now we run the following command to create the blockchain.
 
 ```cmd
 multichaind name -daemon
@@ -101,14 +101,14 @@ multichain-cli name listpermissions issue
 Now that we have the address, we create an asset on this node using the following command:  
 ```cmd
 multichain-cli name issue 1... assetname 1000 
-```
+```   
+![MultiChain]({{ site.baseurl }}/images/createasset.png "Create Asset")
+  
 where 1... is the address we obtained earlier, assetname is the name of the asset and 1000 is the number of units of the asset we want to create. If we want to create an asset which can be further sub-divided into parts, we can pass another parameter to the command, for example in the example below .01 implies that each asset can further be subdivided into 100 parts.   
 
 ```cmd
 multichain-cli name issue 1... assetname 1000 0.01
 ```
-
-![MultiChain]({{ site.baseurl }}/images/createasset.png "Create Asset")
 
 ### Sending Assets
 #### Step:9
@@ -118,6 +118,7 @@ multichain-cli name issue 1... assetname 1000 0.01
  multichain-cli name sendasset 1... asset1 100
 ```
 where 1... is the address of the node to which the asset is being sent.   
+    
 Instead of just sending assets, we can also send transaction metadata along with assets. But before doing this we need to create some data that can be sent.
 
 #### Step:10
@@ -163,7 +164,7 @@ multichain-cli name getwallettransaction a1b2...
 ```
 Where a1b2... is the transaction id.
 
-![MultiChain]({{ site.baseurl }}/images/getwaltrans.png "Verify Transaction")
+![MultiChain]({{ site.baseurl }}/images/getwaltrans.PNG "Verify Transaction")
 
 
 
