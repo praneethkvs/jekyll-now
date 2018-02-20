@@ -34,16 +34,62 @@ you should open the command window in the directory where MultiChain is stored o
   
   
 ### Creating the Blockchain
-Now that you have your command window open, we can start coding.    
-#### Step4:
+Now that you have your command window open, we can start coding.  
+
+#### Step:4
 To create a blockchain, type the following command into the command window.  
+
 ```
 multichain-util create name
-
 ```  
 Replace name with the preferred name for your blockchain then press enter.
   
 ![MultiChain cmd]({{ site.baseurl }}/images/create.png "Create Blockchain")  
+
+This does not actually create the blockchain but as you can see from the output the blockchain parameters
+have been setup. You can view and change the parameters by editing the **params.dat** file.  
+
+Now we runt he following command to create the blockchain.
+
+```
+multichaind name -daemon
+```
+![MultiChain]({{ site.baseurl }}/images/daemon.png "Create Daemon")  
+  
+This command starts the blockchain and runs a daemon which other nodes can connect to.
+It also gives you an ip adress using which other nodes can connect to the blockchain.
+
+### Connecting to the Blockchain
+#### Step:5
+
+Now we can connect to this blockchain from elsewhere. So we open up a command window in the MultiChain folder from another server and use the following command to connect to the blockchain.
+
+```
+multichaind name@10.226.37.163:7723
+```
+![MultiChain]({{ site.baseurl }}/images/request.PNG "Request Connection")  
+
+The blockchain will successfully intialize, but you must be granted permission to connect. Copy and send the wallet address provided to you to the blockchain originator/blockchain admin. For example, the entire line ending in connect,send,receive shown below is the wallet address that needs to be sent.
+
+#### Step:6
+The user with authority to grant connection i.e. the blockchain creator must grant requests to each of the connecting nodes by running the following command.
+
+```
+multichain-cli name grant 1... connect,send,receive
+```
+where "1..." is the adress of the server node trying to connect.  
+
+![MultiChain]({{ site.baseurl }}/images/access_granted.png "Access Granted")
+
+#### Step:7
+After permission is granted, the new user must again type in the node address as done in Step 5 (Note, "multichaind name -daemon" could also be used here.) Successful connection to the blockchain is confirmed by "Node ready".  
+
+Now we have our two daemons running, one that created the blockchain and one that is now connected to the blockchain. Any number of nodes can be connected to the blockchain. 
+
+
+  
+
+
 
   
 
