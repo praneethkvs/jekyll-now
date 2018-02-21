@@ -88,7 +88,8 @@ After permission is granted, the new user must again type in the node address as
 
 Now we have our two daemon nodes running, one that created the blockchain and one that is now connected to the blockchain. Any number of nodes can connect to the blockchain. **To carry out other commands and functions we need to open up new command windows in the multichain folder.**  So open up a new command window in the multichain folder like we did in **Step:3**. 
 
-**Caveat:** The daemon nodes should always keep running in the background as long as the blockchain is alive.
+**Caveat:** The daemon nodes should always keep running in the background as long as the blockchain is alive.  
+
 **Caveat:** The commands used henceforth must be typed into a new command window and not the daemon windows.
 
 ### Creating Assets
