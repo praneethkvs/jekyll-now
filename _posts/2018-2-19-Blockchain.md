@@ -56,8 +56,8 @@ multichaind name -daemon
 ```
 ![MultiChain]({{ site.baseurl }}/images/daemon.png "Create Daemon")  
   
-This command starts the blockchain and runs a daemon which other nodes can connect to.
-It also gives you an ip adress using which other nodes can connect to the blockchain.
+This command starts the blockchain by creating what is called a **genesis block** which has the blockchain parameters and runs a daemon which other nodes can connect to.
+It also gives you an ip address using which other nodes can connect to the blockchain.
 
 ### Connecting to the Blockchain
 #### Step:5
@@ -86,13 +86,14 @@ where "1..." is the adress of the server node trying to connect.
 #### Step:7
 After permission is granted, the new user must again type in the node address as done in Step 5 (Note, "multichaind name -daemon" could also be used here.) Successful connection to the blockchain is confirmed by "Node ready".  
 
-Now we have our two daemon nodes running, one that created the blockchain and one that is now connected to the blockchain. Any number of nodes can connect to the blockchain. **To carry out other commands and functions we need to open up new command windows in the multichain folder.**   
+Now we have our two daemon nodes running, one that created the blockchain and one that is now connected to the blockchain. Any number of nodes can connect to the blockchain. **To carry out other commands and functions we need to open up new command windows in the multichain folder.**  So open up a new command window in the multichain folder like we did in **Step:3**. 
 
-Note: The daemon nodes should always keep running in the background as long as the blockchain is alive.
+**Caveat:** The daemon nodes should always keep running in the background as long as the blockchain is alive.
+**Caveat:** The commands used henceforth must be typed into a new command window and not the daemon windows.
 
 ### Creating Assets
 #### Step:8
-To create an asset, we need to get get the address that has the permission to create assets, so on the first server that is the node that created the blockchain we run the following command:
+To create an asset, we need to get get the address that has the permission to create assets, so on the first server that is the node that created the blockchain we run the following command in a new command window:
 
 ```cmd
 multichain-cli name listpermissions issue
