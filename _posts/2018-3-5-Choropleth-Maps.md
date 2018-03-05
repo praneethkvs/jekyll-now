@@ -24,23 +24,7 @@ electoral_votes.head()
 ```
 
 
-
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-   .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>   
-
-<table border="1" class="dataframe">
+<table border="1px">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -76,7 +60,6 @@ electoral_votes.head()
     </tr>
   </tbody>
 </table>
-</div>  
 
 
 Plotly takes locations in the form of Two-Letter State Codes, so this will come in handy if the data doesn't come with the State codes.
