@@ -31,14 +31,15 @@ electoral_votes.head()
         text-align: right;
     }
 
-    .dataframe thead th {
+   .dataframe thead th {
         text-align: left;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
     }
-</style>
+</style>   
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -155,15 +156,15 @@ electoral_votes.head()
     .dataframe thead tr:only-child th {
         text-align: right;
     }
-
     .dataframe thead th {
         text-align: left;
     }
 
-    .dataframe tbody tr th {
+   .dataframe tbody tr th {
         vertical-align: top;
     }
-</style>
+</style>  
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
