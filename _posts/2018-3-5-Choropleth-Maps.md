@@ -15,8 +15,6 @@ from plotly.offline import init_notebook_mode,iplot
 init_notebook_mode(connected=True) 
 ```
 
-<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
-
 Let's load some data we can work with. The data contains the Electoral Votes share of each State in the U.S.
 
 ```python
