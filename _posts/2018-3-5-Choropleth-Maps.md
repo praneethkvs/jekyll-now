@@ -132,23 +132,7 @@ The dataframe does not have the state code, so let's fix that first.
 electoral_votes["Code"] = electoral_votes["State"].apply(lambda x: states_abbrev_reverse[x])
 electoral_votes.head()
 ```
-
-
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-    .dataframe thead th {
-        text-align: left;
-    }
-
-   .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>  
-
-<table border="1" class="dataframe">
+<table border="1" class="table">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -190,4 +174,3 @@ electoral_votes.head()
     </tr>
   </tbody>
 </table>
-</div>
