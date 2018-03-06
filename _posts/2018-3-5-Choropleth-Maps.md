@@ -8,7 +8,7 @@ Importing the required packages. For plotly to work in offline Jupyter notebook 
 
 ```python
 import pandas as pd
-import numpy as np
+import numpy as np  
 
 import plotly.graph_objs as go 
 from plotly.offline import init_notebook_mode,iplot
@@ -17,7 +17,7 @@ init_notebook_mode(connected=True)
 
 Let's load some data we can work with. The data contains the Electoral Votes share of each State in the U.S.
 
-```python
+```
 #Load the Data
 electoral_votes = pd.read_csv('hw2data/electoral_votes.csv')
 electoral_votes.head()
