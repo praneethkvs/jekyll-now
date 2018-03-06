@@ -1,6 +1,6 @@
 
 pre.highlight {
-  background-color: #efefef;
+  background-color: #ffffff;
   padding: 7px 7px 7px 10px;
   border: 1px solid #ddd;
   -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
@@ -16,8 +16,13 @@ code {
 
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .g { color: #93A1A1 } /* Generic */
+.highlight .l { color: #93A1A1 } /* Literal */
+.highlight .n { color: #93A1A1 } /* Name */
 .highlight .k { font-weight: bold } /* Keyword */
 .highlight .o { font-weight: bold } /* Operator */
+.highlight .x { color: #CB4B16 } /* Other */
+.highlight .p { color: #93A1A1 } /* Punctuation */
 .highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
 .highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
