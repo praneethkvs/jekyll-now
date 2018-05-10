@@ -8,7 +8,7 @@ In a python List Comprehension, the usual style of using an if statement is as b
 ```python
 ["Even" for el in range(1,7) if el%2 == 0]
 ```
-which goves you the output:
+which goves you the output:  
 ['Even', 'Even', 'Even']
 
 But if we want to add an else clause to the above list the most intuitive way is to just add the else clause at the end as below:
@@ -22,6 +22,26 @@ The correct way to do this is as follows:
 ```python
 ["Even" if el%2 == 0 else "Odd" for el in range(1,7)]
 ```
-which gives the output:
+which gives the output:  
 ['Odd', 'Even', 'Odd', 'Even', 'Odd', 'Even']
+
+Multiple if else conditionals can be used in a list comprehension. But the ternary form of the conditionals does not have an
+elif construct but it can be simulated using the else condition as follows:
+```python
+["Even" if el%2==0 else "divby3" if el%3==0 else "divby5" if el%5==0 else "None" for el in range(1,15)]
+```
+This is exactly like saying:
+```python
+for v in l:
+    if v == 1 :
+        print 'yes'
+    else:
+        if v == 2:
+            print 'no'
+        else:
+            print 'idle'
+```
+
+which gives the output:  
+['None', 'Even', 'divby3', 'Even', 'divby5', 'Even', 'None', 'Even', 'divby3', 'Even', 'None', 'Even', 'None', 'Even']
 
