@@ -1,6 +1,6 @@
 ---
 layout: post
-title: writing to a csv file in Pandas (to.csv) formats string as Date.
+title: to.csv() in Pandas formats string as Date.
 ---
 
 While Using the to.csv() function to write a Pandas DataFrame to a csv file, if your dataframe has ratios (1/4 shows up as Jan-4th), these are automatically parsed 
