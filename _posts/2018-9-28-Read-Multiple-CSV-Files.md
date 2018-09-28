@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reading Multiple CSV Files into R
+title: Read Multiple CSV Files into R
 ---
 
 If you want to Read multiple CSV Files into R into a single Dataframe.
