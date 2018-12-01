@@ -45,3 +45,21 @@ for v in l:
 which gives the output:  
 ['None', 'Even', 'divby3', 'Even', 'divby5', 'Even', 'None', 'Even', 'divby3', 'Even', 'None', 'Even', 'None', 'Even']
 
+
+We can also frame more than one for loop in the form of a list comprehension.
+Let's take the the following piece of code which has two for loops.  
+
+```python
+
+arr = [10,8,7,14,5]
+
+for i in range(0,len(arr)):
+        for j in range(0,i):
+            if arr[j] < arr[i]:
+                print(arr[i]-arr[j])
+```
+  
+The same piece of code in list comprehension is as follows:
+```python
+[arr[i]-arr[j] for i in range(0,len(arr)) for j in range(0,i) if (arr[j] < arr[i])]
+```  
