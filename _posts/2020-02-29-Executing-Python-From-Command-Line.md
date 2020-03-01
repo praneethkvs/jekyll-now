@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create Anaconda Environment
+title: Parsing Arguments from command line to Python Scripts.
 ---
 
 If you want to pass arguments to a python script at runtime through the command line, instead of pre-defining them inside the script, we can do this using the library argparse, which parses the commands input from the command line and passes them on to functions in your script.
