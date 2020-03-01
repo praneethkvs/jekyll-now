@@ -1,0 +1,63 @@
+---
+layout: post
+title: Create Anaconda Environment
+---
+
+If you want to pass arguments to a python script at runtime through the command line, instead of pre-defining them inside the script, we can do this using the library argparse, which parses the commands input from the command line and passes them on to functions in your script.
+
+Let's create a python script `add.py` which has a simple function that adds two numbers.
+
+```python
+def my_add(a,b):
+    return(a+b)
+
+
+if __name__=="__main__":
+    print(my_add(2,3))
+```    
+
+If you run this script from your shell `python add.py`, you should see 5, since you passed 2 and 3 as arguments to the function. Now if you want to change these values you would have to go into the script and change them manually. Now let's use argparse so that these arguments can be passed from the commandline at runtime.
+
+```python
+import argparse
+
+parser = argparse.ArgumentParser('Input Numbers to Add')
+parser.add_argument('a',type=int,help='Input First Number')
+parser.add_argument('b',type=int,help='Input Second Number')
+
+args= parser.parse_args()
+
+
+def my_add(a,b):
+    return(a+b)
+
+
+if __name__=="__main__":
+    print(my_add(args.a,args.b))
+
+```
+Now you can run this from the command line and pass in arguments to the `my_add` function as follows `python add.py 10 8`. If you try to run it without passing the arguments, it should throw an error, since these arguments are positional and the script cannot run without the arguments.
+
+If you run `python add.py --help` , it will display information that we entered in the help of add_argument(). The Leading -- indicate that it is an optional argument i.e. running the script without specfying this argument does not throw an error. Let's add some optional arguments.
+
+```python
+import argparse
+
+parser = argparse.ArgumentParser('Input Numbers to Add')
+parser.add_argument('a',type=int,help='Input First Number')
+parser.add_argument('b',type=int,help='Input Second Number')
+parser.add_argument('--opt_arg',type=str,help='Optional Argument')
+
+args= parser.parse_args()
+
+def my_add(a,b):
+    return(a+b)
+
+if __name__=="__main__":
+    print(my_add(args.a,args.b))
+    print(args.opt_arg)
+```
+To pass in the optional argument you need to specify the name of the argument,   
+`python add.py 20 5 --opt_arg Optional_Argument`
+
+This should print out the Optional Argument along with the sum of the numbers.
