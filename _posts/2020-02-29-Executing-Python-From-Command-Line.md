@@ -61,3 +61,30 @@ To pass in the optional argument you need to specify the name of the argument,
 `python add.py 20 5 --opt_arg Optional_Argument`
 
 This should print out the Optional Argument along with the sum of the numbers.
+
+You can also pass in a list of arguments by using `nargs` as follows:
+```python
+import argparse
+
+parser = argparse.ArgumentParser('Input Numbers to Add')
+parser.add_argument('nums',type=int,help='Input List of Numbers to be summed',nargs="*")
+
+
+args= parser.parse_args()
+
+print(args)
+
+def my_add(nums):
+    res = 0
+    for num in nums:
+        res += num
+    return(res)
+
+
+if __name__=="__main__":
+    print(my_add(args.nums))
+    
+    if args.opt_arg is not None:
+        print(args.opt_arg)
+```
+Now you can run `python add.py 1 2 3 4`
