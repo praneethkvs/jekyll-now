@@ -5,6 +5,8 @@ title: Parsing Arguments from command line to Python Scripts.
 
 If you want to pass arguments to a python script at runtime through the command line, instead of pre-defining them inside the script, we can do this using the library argparse, which parses the commands input from the command line and passes them on to functions in your script.
 
+<b> Parsing Arguments.</b>
+
 Let's create a python script `add.py` which has a simple function that adds two numbers.
 
 ```python
@@ -38,6 +40,8 @@ if __name__=="__main__":
 ```
 Now you can run this from the command line and pass in arguments to the `my_add` function as follows `python add.py 10 8`. If you try to run it without passing the arguments, it should throw an error, since these arguments are positional and the script cannot run without the arguments.
 
+<b>Optional Arguments.</b>
+
 If you run `python add.py --help` , it will display information that we entered in the help of add_argument(). The Leading -- indicate that it is an optional argument i.e. running the script without specfying this argument does not throw an error. Let's add some optional arguments.
 
 ```python
@@ -61,6 +65,8 @@ To pass in the optional argument you need to specify the name of the argument,
 `python add.py 20 5 --opt_arg Optional_Argument`
 
 This should print out the Optional Argument along with the sum of the numbers.
+
+<b>Arguments as a list.</b>
 
 You can also pass in a list of arguments by using `nargs` as follows:
 ```python
@@ -88,3 +94,30 @@ if __name__=="__main__":
         print(args.opt_arg)
 ```
 Now you can run `python add.py 1 2 3 4`
+
+<b> Parsing Unknown Arguments.</b>
+
+If you pass arguments to add.py that are not defined in the argument parser, it throws an error, Sometimes a script may only parse a few of the command-line arguments, passing the remaining arguments on to another script or program. In these cases, the parse_known_args() method can be useful. It works much like parse_args() except that it does not produce an error when extra arguments are present. Instead, it returns a two item tuple containing the populated namespace of known arguments that are defined in the argument parser and the list of remaining argument strings that are unkown.
+
+```python
+import argparse
+
+parser = argparse.ArgumentParser('Input Numbers to Add')
+parser.add_argument('nums',type=int,help='Input List of Numbers to be summed',nargs="*")
+
+args,unkown_args= parser.parse_known_args()
+
+print(args)
+print(unkown_args)
+
+def my_add(nums):
+    res = 0
+    for num in nums:
+        res += num
+    return(res)
+
+
+if __name__=="__main__":
+    print(my_add(args.nums))
+```
+Running `python add.py 1 2 3 4 -opt Uknown_arg` will run without any errors although the only argument defined is the list nums. 
