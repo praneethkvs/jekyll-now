@@ -3,8 +3,8 @@ layout: post
 title: Create Anaconda Environment
 ---
 
-When juggling with multiple projects and workstreams each of which has a disparate set of dependencies, it is a good idea to isolate your work environments. This not only keeps everything clean and organized, it also makes  
-switching between different projects easier and in general is a good programming practice.
+When juggling with multiple projects and workstreams each of which has a disparate set of dependencies, it is a good idea to
+isolate your work environments. This not only keeps everything clean and organized, it also makes switching between different projects easier and in general is a good programming practice.
 
 To Create an isolated python environent in anaconda.  
 
